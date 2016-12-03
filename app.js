@@ -12,6 +12,10 @@ var express = require('express'),
     config              = JSON.parse(
                             fs.readFileSync(configurationFile)
                         ),
+    settingFile         = 'config/settings.json',
+    settings            = JSON.parse(
+                            fs.readFileSync(settingFile)
+                        ),
     connection          = mysql.createConnection({
                             host     : 'localhost',
                             user     : config.username,
@@ -25,7 +29,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
-app.use(session({secret:'somesecrettokenhere'}));
+app.use(session({secret: settings.secret_token}));
 
 app.locals.fromNow = function(date){
     return moment(date).fromNow();
