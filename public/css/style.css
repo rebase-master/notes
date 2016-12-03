@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Aref+Ruqaa:700|Roboto|Open+Sans');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body, html{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #1d6660;
+    font-family: 'Roboto', sans-serif;
+
+}
+textarea{
+    resize: vertical;
+}
+a{
+    border-bottom: 1px solid transparent;
+}
+a:active, a:link, a:visited{
+    text-decoration: none;
+    outline: none;
+    color: #ffffff;
+}
+a:hover{
+    border-bottom: 1px solid #fff;
+}
+.body{
+    margin-top: 50px;
+}
+#main{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffda45+6,ffce08+85 */
+    /*background: #ffce08; !* Old browsers *!*/
+    /*background: -moz-linear-gradient(top,  #ffce08 6%, #E27A3F 85%); !* FF3.6-15 *!*/
+    /*background: -webkit-linear-gradient(top,  #ffce08 6%,#E27A3F 85%); !* Chrome10-25,Safari5.1-6 *!*/
+    /*background: linear-gradient(to bottom, #EFC94C 6%, #E27A3F 85%); !* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ *!*/
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffda45', endColorstr='#ffce08',GradientType=0 ); !* IE6-9 *!*/
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#01143c+0,001f46+6,002550+9,002b56+13,002f5d+18,023262+19,013463+21,023668+23,03386c+27,00396e+28,074075+35,034076+38,054278+39,05447a+49,07467c+50,07467c+68,054278+78,034076+81,043a69+89,013463+95,002b58+100 */
+    /*background: #01143c; !* Old browsers *!*/
+    /*background: -moz-linear-gradient(left,  #01143c 0%, #001f46 6%, #002550 9%, #002b56 13%, #002f5d 18%, #023262 19%, #013463 21%, #023668 23%, #03386c 27%, #00396e 28%, #074075 35%, #034076 38%, #054278 39%, #05447a 49%, #07467c 50%, #07467c 68%, #054278 78%, #034076 81%, #043a69 89%, #013463 95%, #002b58 100%); !* FF3.6-15 *!*/
+    /*background: -webkit-linear-gradient(left,  #01143c 0%,#001f46 6%,#002550 9%,#002b56 13%,#002f5d 18%,#023262 19%,#013463 21%,#023668 23%,#03386c 27%,#00396e 28%,#074075 35%,#034076 38%,#054278 39%,#05447a 49%,#07467c 50%,#07467c 68%,#054278 78%,#034076 81%,#043a69 89%,#013463 95%,#002b58 100%); !* Chrome10-25,Safari5.1-6 *!*/
+    /*background: linear-gradient(to right,  #01143c 0%,#001f46 6%,#002550 9%,#002b56 13%,#002f5d 18%,#023262 19%,#013463 21%,#023668 23%,#03386c 27%,#00396e 28%,#074075 35%,#034076 38%,#054278 39%,#05447a 49%,#07467c 50%,#07467c 68%,#054278 78%,#034076 81%,#043a69 89%,#013463 95%,#002b58 100%); !* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ *!*/
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01143c', endColorstr='#002b58',GradientType=1 ); !* IE6-9 *!*/
+
+    border-radius: 4px;
+    /*margin-top: 50px;*/
+    padding: 0 0 20px 0;
+    color: #fff;
+}
+#header .page-header{
+    border: none;
+}
+#header .page-header h1 {
+    display: inline-block;
+    font-size: 42px;
+    font-family:'Aref Ruqaa', serif;
+}
+#header .page-header small{
+    color: #FBF3A4;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+}
+#header .page-header a{
+    color: #fff;
+    text-decoration: none;
+    /*text-shadow: 1px 0 1px #999;*/
+}
+#header .entry-point {
+    display: inline-block;
+    float: right;
+    font-size: 20px;
+    margin-top: 35px;
+    padding: 0 30px 0 0;
+}
+#header .entry-point .btn-light{
+    font-size: 16px;
+    padding: 5px 15px;
+}
+#header .entry-point p{
+    display: inline-block;
+}
+#userAddForm {
+    margin: 20px auto;
+    min-width: 200px;
+    width: 60%;
+}
+.wide70{
+    width: 70%;
+    margin: 0 auto;
+}
+.wide70 h1{
+    text-align: center;
+}
+.btn-light{
+    background-color: #dc840b;
+    border: 1px solid #555;
+    border-radius: 4px;
+    color: #fff;
+    padding: 10px 20px;
+}
+.btn-light:hover{
+    color: #ffffff;
+    border: 1px solid transparent;
+}
+.body .section-int.text-right > a::after {
+    content: "|";
+    padding-left: 10px;
+}
+.section-int.text-right > a:last-child::after {
+    content: "";
+}
+.section-int a {
+    /*background-color: #dc840b;*/
+    /*border: 1px solid #555;*/
+    /*border-radius: 4px;*/
+    color: #fff;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 0;
+}
+.section-int a .glyphicon{
+    margin-right: 5px;
+}
+.notes-list{
+    /*border: 1px solid #fff;*/
+}
+.notes {
+    background-color: #fff;
+    border: 1px solid #555;
+    border-radius: 3px;
+    color: #111;
+    font-family: "Open sans", sans-serif;
+    margin-bottom: 20px;
+    padding: 20px 40px;
+}
+.notes .username {
+    color: #777;
+    font-weight: 600;
+    margin-top: 30px;
+}
+.notes .username a{
+    color: #333;
+}
+.notes_title small {
+    font-size: 40%;
+    font-style: italic;
+}
+.notes h1{
+    color: #1D6660;
+}
+.notes .note {
+    color: #333;
+    font-size: 16px;
+    margin: 10px 10px 20px;
+    padding: 20px;
+}
+.notes .user{
+    margin-top: 10px;
+}
+.notes .interaction a{
+    color: #DC840B;
+    font-size: 12px;
+}
+.interaction a .glyphicon {
+    font-size: 10px;
+    margin-left: 10px;
+    margin-right: 5px;
+    vertical-align: inherit;
+}
+.nform .control-label{
+    text-align: justify;
+}

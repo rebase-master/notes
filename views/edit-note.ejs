@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://localhost:8080/css/bootstrap.min.css" media="screen" />
+    <link rel="stylesheet" href="http://localhost:8080/css/style.css" media="screen" />
+    <title><%= title %></title>
+</head>
+<body>
+    <div class="container">
+        <div id="main" class="col-sm-8 col-sm-offset-2">
+            <div id="header" class="clearfix">
+                <div id="logo" class="col-sm-12 text-center">
+                    <h1><a href="/">Notes</a></h1>
+                    <p> - a node.js way!</p>
+                </div>
+            </div>
+            <div id="add-note-container">
+                <div class="center-block wide70">
+                    <h1>Edit note</h1>
+                    <% if(error != null){ %>
+                    <div class="alert alert-danger col-md-offset-4 text-center">
+                        <p><%= error %></p>
+                    </div>
+                    <% } %>
+
+                    <form class="form-horizontal" method="post" action="/edit/id/<%= noteId %>">
+                        <div class="form-group">
+                            <label class="col-md-4 sr-only control-label" for="note">Note</label>
+                            <div class="col-md-8">
+                                <textarea id="note" name="note" class="input-large required form-control"><%= note %></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-8 col-md-offset-4">
+                                <input type="submit" class="btn btn-light" value="Save" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

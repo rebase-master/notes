@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://localhost:8080/css/bootstrap.min.css" media="screen" />
+    <link rel="stylesheet" href="http://localhost:8080/css/style.css" media="screen" />
+    <title><%= title %></title>
+</head>
+<body>
+    <div class="container">
+        <div id="main" class="col-sm-8 col-sm-offset-2">
+            <div id="header" class="clearfix">
+                <div id="logo" class="text-center">
+                    <div class="page-header">
+                        <h1><a href="/">Notes</a>
+                            <small>- the node.js way!</small>
+                        </h1>
+                        <div class="entry-point ">
+                            <% if(username == null){ %>
+                            <a class="btn-light" href="/login">Login</a>
+                            <% }else{ %>
+                            <p>Hello, <%= username %></p> |
+                            <a class="btn-light" href="/logout">Logout</a>
+                            <% } %>
+                        </div><!-- entry-point -->
+
+                    </div>
+
+                </div>
+            </div> <!-- header -->
+            <hr />
+            <div class="body">
+                <div class="section-int text-right">
+                    <a href="/add"><span class="glyphicon glyphicon-plus"></span>Add note</a>
+                    <a href="/list"><span class="glyphicon glyphicon-list"></span>Notes list (JSON)</a>
+                    <a href="/status"><span class="glyphicon glyphicon-eye-open"></span>Status</a>
+                </div>
+                <div class="notes-list ">
+                    <% for(var i=0;i<notes.length; i++){ %>
+                        <div class="notes">
+                            <div class="_top clearfix">
+                                <div class="notes_title pull-left">
+                                    <h1><%= notes[i].title %> <small><%= fromNow(notes[i].updated_at) %></small></h1>
+                                </div>
+                                <div class="username pull-right">
+                                    <p><%= notes[i].username %></p>
+                                </div>
+                            </div><!--_top-->
+
+                            <div class="notes_desc">
+                                <p>
+                                    <%= notes[i].description %>
+                                </p>
+                            </div>
+                            <div class="interaction clearfix">
+
+                                <div class="text-right">
+                                    <% if(username != null && username == notes[i].username){ %>
+                                        <a href="/edit/id/<%= notes[i].id %>"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>Edit</a>
+                                        <a href="/delete/id/<%= notes[i].id %>"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Delete</a>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
